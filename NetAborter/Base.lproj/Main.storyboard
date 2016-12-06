@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sQZ-eg-Bx0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Clothing-->
+        <scene sceneID="NzD-a9-uXd">
+            <objects>
+                <collectionViewController id="qsj-1E-wng" customClass="ProductsCollectionViewController" customModule="NetAborter" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" id="ofx-wg-pc3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="0.0" id="81M-Sg-tNk">
+                            <size key="itemSize" width="237" height="395"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCollectionViewCell" id="xiU-BI-ECT" customClass="ProductCollectionViewCell" customModule="NetAborter" customModuleProvider="target">
+                                <rect key="frame" x="69" y="0.0" width="237" height="395"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="237" height="395"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u9x-li-Buy">
+                                            <rect key="frame" x="0.0" y="0.0" width="237" height="354"/>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="u9x-li-Buy" secondAttribute="height" multiplier="18:27" priority="250" id="g7L-Kf-F2W"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="749" verticalHuggingPriority="999" verticalCompressionResistancePriority="999" text="price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYC-lK-t1o">
+                                            <rect key="frame" x="0.0" y="380" width="222" height="15"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="V7m-jt-Cd0">
+                                            <rect key="frame" x="222" y="380" width="15" height="15"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="product name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5O-j0-sxQ">
+                                            <rect key="frame" x="0.0" y="358" width="237" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="y5O-j0-sxQ" firstAttribute="top" secondItem="u9x-li-Buy" secondAttribute="bottom" constant="4" id="CAh-bB-rb1"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="V7m-jt-Cd0" secondAttribute="bottom" id="FZ6-cz-3mV"/>
+                                    <constraint firstItem="V7m-jt-Cd0" firstAttribute="trailing" secondItem="xiU-BI-ECT" secondAttribute="trailing" id="Jy1-4C-qGw"/>
+                                    <constraint firstItem="hYC-lK-t1o" firstAttribute="leading" secondItem="xiU-BI-ECT" secondAttribute="leading" id="N9x-eH-Mmz"/>
+                                    <constraint firstItem="y5O-j0-sxQ" firstAttribute="leading" secondItem="xiU-BI-ECT" secondAttribute="leading" id="P0P-U6-XS5"/>
+                                    <constraint firstItem="hYC-lK-t1o" firstAttribute="top" secondItem="y5O-j0-sxQ" secondAttribute="bottom" constant="4" id="QD2-Cb-l2g"/>
+                                    <constraint firstItem="y5O-j0-sxQ" firstAttribute="trailing" secondItem="xiU-BI-ECT" secondAttribute="trailing" id="Vrj-zi-8n5"/>
+                                    <constraint firstItem="u9x-li-Buy" firstAttribute="centerX" secondItem="xiU-BI-ECT" secondAttribute="centerX" id="XVV-ap-CqP"/>
+                                    <constraint firstItem="u9x-li-Buy" firstAttribute="top" secondItem="xiU-BI-ECT" secondAttribute="top" id="YYL-AX-0wQ"/>
+                                    <constraint firstItem="V7m-jt-Cd0" firstAttribute="leading" secondItem="hYC-lK-t1o" secondAttribute="trailing" id="fvl-cF-qUY"/>
+                                    <constraint firstItem="V7m-jt-Cd0" firstAttribute="bottom" secondItem="hYC-lK-t1o" secondAttribute="bottom" id="wZX-Cc-b4q"/>
+                                    <constraint firstItem="hYC-lK-t1o" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xiU-BI-ECT" secondAttribute="bottom" id="y0x-UC-IjC"/>
+                                    <constraint firstItem="u9x-li-Buy" firstAttribute="leading" secondItem="xiU-BI-ECT" secondAttribute="leading" id="ysx-sQ-xg0"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                <connections>
+                                    <outlet property="favouritedImageView" destination="V7m-jt-Cd0" id="rmB-cU-0eo"/>
+                                    <outlet property="imageView" destination="u9x-li-Buy" id="QKR-W6-AmW"/>
+                                    <outlet property="nameLabel" destination="y5O-j0-sxQ" id="LU7-LZ-vLV"/>
+                                    <outlet property="priceLabel" destination="hYC-lK-t1o" id="9Pe-63-ZMb"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="delegate" destination="qsj-1E-wng" id="Qd5-1k-XKn"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Clothing" id="DfJ-wS-IAc"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQO-5A-QQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664.79999999999995" y="-0.44977511244377816"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LkF-mp-2fh">
+            <objects>
+                <navigationController id="sQZ-eg-Bx0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oRH-Wp-Hhw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qsj-1E-wng" kind="relationship" relationship="rootViewController" id="eCU-ai-PTO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXs-d1-hIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Star" width="15" height="15"/>
+    </resources>
+</document>

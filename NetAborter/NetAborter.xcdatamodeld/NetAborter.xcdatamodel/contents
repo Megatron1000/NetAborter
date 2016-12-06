@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2657" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Price" representedClassName="Price" syncable="YES" codeGenerationType="category">
+        <attribute name="amount" optional="YES" attributeType="Decimal" defaultValueString="0" syncable="YES"/>
+        <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="price" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="category">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="favouritedByUsers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="favouriteProducts" inverseEntity="User" syncable="YES"/>
+        <relationship name="price" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Price" inverseName="product" inverseEntity="Price" syncable="YES"/>
+        <relationship name="productImage" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ProductImage" inverseName="product" inverseEntity="ProductImage" syncable="YES"/>
+    </entity>
+    <entity name="ProductImage" representedClassName="ProductImage" syncable="YES" codeGenerationType="category">
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="productImage" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="category">
+        <relationship name="favouriteProducts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="favouritedByUsers" inverseEntity="Product" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Price" positionX="-261" positionY="54" width="128" height="88"/>
+        <element name="Product" positionX="-263" positionY="-93" width="128" height="118"/>
+        <element name="ProductImage" positionX="-90" positionY="-79" width="128" height="75"/>
+        <element name="User" positionX="-441" positionY="-94" width="128" height="58"/>
+    </elements>
+</model>
