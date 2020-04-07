@@ -23,7 +23,7 @@ extension Product {
         product.name = "Test Name"
 
         let productImage = ProductImage(managedObjectContext: managedObjectContext)
-        productImage.imageData = imageFixtureData as NSData
+        productImage.imageData = imageFixtureData
         productImage.product = product
 
         let price = Price(managedObjectContext: managedObjectContext)

@@ -15,7 +15,7 @@ public class ProductImage: NSManagedObject {
 
     var image: UIImage? {
 
-        guard let imageData = imageData as? Data else { return nil }
+        guard let imageData = imageData else { return nil }
 
         return UIImage(data: imageData)
     }

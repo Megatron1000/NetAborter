@@ -40,10 +40,10 @@ class AppDelegate: UIResponder {
 
 extension AppDelegate: UIApplicationDelegate {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         guard
-            let productsCollectionViewController = window?.rootViewController?.childViewControllers.first as? ProductsCollectionViewController else {
+            let productsCollectionViewController = window?.rootViewController?.children.first as? ProductsCollectionViewController else {
                 fatalError("Wrong initial view controller")
         }
 

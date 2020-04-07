@@ -73,7 +73,7 @@ class ProductsService {
                             return
                     }
 
-                    let products: [Product] = productDictionaries.flatMap { productDictionary in
+                    let products: [Product] = productDictionaries.compactMap { productDictionary in
                         return Product(context: strongSelf.managedObjectContext, dictionary: productDictionary)
                     }
 
@@ -115,7 +115,7 @@ class ProductsService {
                             return
                     }
                     let productImage = ProductImage(managedObjectContext: strongSelf.managedObjectContext)
-                    productImage.imageData = data as NSData?
+                    productImage.imageData = data
                     product.productImage = productImage
                     completion(.success(productImage: productImage))
 

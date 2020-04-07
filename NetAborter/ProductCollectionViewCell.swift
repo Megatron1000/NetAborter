@@ -16,4 +16,9 @@ class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet var priceLabel: UILabel?
 
     static var reuseIdentifier = "ProductCollectionViewCell"
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView?.image = nil
+    }
 }

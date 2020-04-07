@@ -10,7 +10,7 @@ import UIKit
 
 extension UIAlertController {
 
-    convenience init(title: String?, message: String?, defaultActionTitle: String?, dismissedHandler: ((Void) -> Void)? = nil) {
+    convenience init(title: String?, message: String?, defaultActionTitle: String?, dismissedHandler: (() -> Void)? = nil) {
 
         self.init(title: title, message: message, preferredStyle: .alert)
 

@@ -64,7 +64,7 @@ class ProductsCollectionViewController: UICollectionViewController {
 
     // MARK: Refreshing Data
 
-    func refreshData(_ sender: AnyObject?) {
+    @objc func refreshData(_ sender: AnyObject?) {
 
         refreshControl.beginRefreshing()
 

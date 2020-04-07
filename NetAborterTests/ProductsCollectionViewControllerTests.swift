@@ -26,7 +26,7 @@ class ProductsCollectionViewControllerTests: XCTestCase {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rootViewController = storyboard.instantiateInitialViewController()
-        productsCollectionViewController = rootViewController?.childViewControllers.first as! ProductsCollectionViewController
+        productsCollectionViewController = rootViewController?.children.first as? ProductsCollectionViewController
         productsCollectionViewController.user = self.user
     }
 
@@ -72,7 +72,7 @@ class ProductsCollectionViewControllerTests: XCTestCase {
         let cell = dataSource.collectionView(collectionView, cellForItemAt: firstIndexPath) as? ProductCollectionViewCell
         XCTAssertEqual(cell?.nameLabel?.text, "Test Name")
         XCTAssertEqual(cell?.priceLabel?.text, "£100.00")
-        XCTAssertEqual(UIImagePNGRepresentation((cell?.imageView!.image!)!), UIImagePNGRepresentation(product.image!))
+        XCTAssertEqual((cell?.imageView!.image!)!.pngData(), product.image!.pngData())
     }
 
 }
